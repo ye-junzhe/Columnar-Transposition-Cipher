@@ -70,7 +70,7 @@ impl MessageMatrix {
                 .map(|(index, letter)| Letter::construct(index, letter, 0))
                 .collect();
             message_matrix.message.push(row_in_matrix);
-            message = String::from(message.split_at(6).1);
+            message = String::from(message.split_at(step).1);
         }
 
         if message.chars().count() < step {
